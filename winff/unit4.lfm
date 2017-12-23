@@ -51,21 +51,22 @@ object frmPreferences: TfrmPreferences
   }
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.0.10.0'
+  LCLVersion = '1.8.0.6'
   object pnlBottom: TPanel
-    Left = 0
+    Left = 3
     Height = 26
-    Top = 253
-    Width = 352
+    Top = 250
+    Width = 346
     Align = alBottom
     AutoSize = True
+    BorderSpacing.Around = 3
     BevelOuter = bvNone
     ClientHeight = 26
-    ClientWidth = 352
+    ClientWidth = 346
     Constraints.MinHeight = 20
     TabOrder = 0
     object btnOK: TBitBtn
-      Left = 186
+      Left = 179
       Height = 26
       Top = 0
       Width = 80
@@ -81,10 +82,10 @@ object frmPreferences: TfrmPreferences
       TabOrder = 0
     end
     object btnCancel: TBitBtn
-      Left = 271
+      Left = 264
       Height = 26
       Top = 0
-      Width = 81
+      Width = 82
       Align = alRight
       AutoSize = True
       Cancel = True
@@ -98,33 +99,33 @@ object frmPreferences: TfrmPreferences
   end
   object PageControl1: TPageControl
     Left = 0
-    Height = 253
+    Height = 247
     Top = 0
     Width = 352
-    ActivePage = tabGeneral
+    ActivePage = tabWindows
     Align = alClient
     Constraints.MinHeight = 200
     Constraints.MinWidth = 300
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 1
     object tabGeneral: TTabSheet
       Caption = 'General'
-      ClientHeight = 225
+      ClientHeight = 223
       ClientWidth = 344
       object sbGeneral: TScrollBox
         Left = 0
-        Height = 225
+        Height = 223
         Top = 0
         Width = 344
-        HorzScrollBar.Page = 340
-        VertScrollBar.Page = 221
+        HorzScrollBar.Page = 293
+        VertScrollBar.Page = 156
         Align = alClient
-        ClientHeight = 221
+        ClientHeight = 219
         ClientWidth = 340
         TabOrder = 0
         object pnlDefaultDir: TPanel
           Left = 4
-          Height = 41
+          Height = 39
           Top = 5
           Width = 332
           Align = alTop
@@ -133,15 +134,15 @@ object frmPreferences: TfrmPreferences
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 41
+          ClientHeight = 39
           ClientWidth = 332
           Constraints.MinHeight = 5
           Constraints.MinWidth = 5
           TabOrder = 0
           object edtDefaultDir: TEdit
             Left = 0
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 12
             Width = 294
             Align = alClient
             BorderSpacing.Right = 3
@@ -149,8 +150,8 @@ object frmPreferences: TfrmPreferences
           end
           object btnDefaultDir: TButton
             Left = 297
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 12
             Width = 35
             Align = alRight
             AutoSize = True
@@ -162,7 +163,7 @@ object frmPreferences: TfrmPreferences
           end
           object lblDefaultDir: TLabel
             Left = 0
-            Height = 16
+            Height = 12
             Top = 0
             Width = 332
             Align = alTop
@@ -172,7 +173,7 @@ object frmPreferences: TfrmPreferences
         end
         object pnlThreads: TPanel
           Left = 4
-          Height = 23
+          Height = 25
           Top = 75
           Width = 332
           Align = alTop
@@ -181,7 +182,7 @@ object frmPreferences: TfrmPreferences
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 23
+          ClientHeight = 25
           ClientWidth = 332
           TabOrder = 1
           object cbThreads: TCheckBox
@@ -189,9 +190,9 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Control = edtThreads
             AnchorSideTop.Side = asrCenter
             Left = 0
-            Height = 19
+            Height = 21
             Top = 2
-            Width = 180
+            Width = 202
             Caption = 'Use Several Encoding Threads:'
             TabOrder = 0
           end
@@ -201,10 +202,10 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Control = pnlThreads
             AnchorSideRight.Control = pnlThreads
             AnchorSideRight.Side = asrBottom
-            Left = 183
-            Height = 23
+            Left = 205
+            Height = 25
             Top = 0
-            Width = 149
+            Width = 127
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Left = 3
             Constraints.MinWidth = 10
@@ -214,8 +215,8 @@ object frmPreferences: TfrmPreferences
         end
         object pnlPriority: TPanel
           Left = 4
-          Height = 23
-          Top = 103
+          Height = 25
+          Top = 105
           Width = 332
           Align = alTop
           AutoSize = True
@@ -223,7 +224,7 @@ object frmPreferences: TfrmPreferences
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 23
+          ClientHeight = 25
           ClientWidth = 332
           TabOrder = 2
           object lblPriority: TLabel
@@ -232,9 +233,9 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = prioritybox
             Left = 0
-            Height = 16
-            Top = 3
-            Width = 42
+            Height = 12
+            Top = 6
+            Width = 54
             BorderSpacing.Right = 3
             Caption = 'Priority:'
             ParentColor = False
@@ -244,20 +245,20 @@ object frmPreferences: TfrmPreferences
             AnchorSideLeft.Side = asrBottom
             AnchorSideRight.Control = pnlPriority
             AnchorSideRight.Side = asrBottom
-            Left = 45
-            Height = 23
+            Left = 57
+            Height = 25
             Top = 0
-            Width = 287
+            Width = 275
             Anchors = [akTop, akLeft, akRight]
-            ItemHeight = 15
+            ItemHeight = 17
             Style = csDropDownList
             TabOrder = 0
           end
         end
         object cbRememberLastDir: TCheckBox
           Left = 4
-          Height = 19
-          Top = 51
+          Height = 21
+          Top = 49
           Width = 332
           Align = alTop
           BorderSpacing.Left = 4
@@ -268,8 +269,8 @@ object frmPreferences: TfrmPreferences
         end
         object cbEnableMulti: TCheckBox
           Left = 5
-          Height = 19
-          Top = 131
+          Height = 21
+          Top = 135
           Width = 335
           Align = alTop
           BorderSpacing.Left = 5
@@ -281,17 +282,17 @@ object frmPreferences: TfrmPreferences
     end
     object tabScripting: TTabSheet
       Caption = 'Scripting'
-      ClientHeight = 225
+      ClientHeight = 223
       ClientWidth = 344
       object sbScripting: TScrollBox
         Left = 0
-        Height = 225
+        Height = 223
         Top = 0
         Width = 344
-        HorzScrollBar.Page = 340
-        VertScrollBar.Page = 221
+        HorzScrollBar.Page = 254
+        VertScrollBar.Page = 90
         Align = alClient
-        ClientHeight = 221
+        ClientHeight = 219
         ClientWidth = 340
         TabOrder = 0
         object pnlBeforeCommand: TPanel
@@ -311,8 +312,8 @@ object frmPreferences: TfrmPreferences
           object edtBeforeCommand: TEdit
             AnchorSideRight.Control = btnBeforeCommand
             Left = 0
-            Height = 24
-            Top = 16
+            Height = 28
+            Top = 12
             Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
@@ -325,8 +326,8 @@ object frmPreferences: TfrmPreferences
             AnchorSideRight.Control = pnlBeforeCommand
             AnchorSideRight.Side = asrBottom
             Left = 297
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -338,7 +339,7 @@ object frmPreferences: TfrmPreferences
           end
           object lblBeforeCommand: TLabel
             Left = 0
-            Height = 16
+            Height = 12
             Top = 0
             Width = 332
             Align = alTop
@@ -363,8 +364,8 @@ object frmPreferences: TfrmPreferences
           object edtAfterCommand: TEdit
             AnchorSideRight.Control = btnAfterCommand
             Left = 0
-            Height = 24
-            Top = 16
+            Height = 28
+            Top = 12
             Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
@@ -377,8 +378,8 @@ object frmPreferences: TfrmPreferences
             AnchorSideRight.Control = pnlAfterCommand
             AnchorSideRight.Side = asrBottom
             Left = 297
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -390,7 +391,7 @@ object frmPreferences: TfrmPreferences
           end
           object lblAfterCommand: TLabel
             Left = 0
-            Height = 16
+            Height = 12
             Top = 0
             Width = 332
             Align = alTop
@@ -402,17 +403,17 @@ object frmPreferences: TfrmPreferences
     end
     object tabWindows: TTabSheet
       Caption = 'MS Windows'
-      ClientHeight = 225
+      ClientHeight = 217
       ClientWidth = 344
       object sbWindows: TScrollBox
         Left = 0
-        Height = 225
+        Height = 217
         Top = 0
         Width = 344
-        HorzScrollBar.Page = 340
-        VertScrollBar.Page = 221
+        HorzScrollBar.Page = 249
+        VertScrollBar.Page = 116
         Align = alClient
-        ClientHeight = 221
+        ClientHeight = 213
         ClientWidth = 340
         TabOrder = 0
         object pnlWinFFmpegPath: TPanel
@@ -432,8 +433,8 @@ object frmPreferences: TfrmPreferences
           object edtWinFFmpegPath: TEdit
             AnchorSideRight.Control = btnWinFFmpegPath
             Left = 0
-            Height = 24
-            Top = 16
+            Height = 28
+            Top = 12
             Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
@@ -446,8 +447,8 @@ object frmPreferences: TfrmPreferences
             AnchorSideRight.Control = pnlWinFFmpegPath
             AnchorSideRight.Side = asrBottom
             Left = 297
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -459,7 +460,7 @@ object frmPreferences: TfrmPreferences
           end
           object lblWinFFmpegPath: TLabel
             Left = 0
-            Height = 16
+            Height = 12
             Top = 0
             Width = 332
             Align = alTop
@@ -484,8 +485,8 @@ object frmPreferences: TfrmPreferences
           object edtWinFFplayPath: TEdit
             AnchorSideRight.Control = btnWinFFplayPath
             Left = 0
-            Height = 24
-            Top = 16
+            Height = 28
+            Top = 12
             Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
@@ -498,8 +499,8 @@ object frmPreferences: TfrmPreferences
             AnchorSideRight.Control = pnlWinFFplayPath
             AnchorSideRight.Side = asrBottom
             Left = 297
-            Height = 25
-            Top = 16
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -511,7 +512,7 @@ object frmPreferences: TfrmPreferences
           end
           object lblWinFFplay: TLabel
             Left = 0
-            Height = 16
+            Height = 12
             Top = 0
             Width = 332
             Align = alTop
@@ -521,7 +522,7 @@ object frmPreferences: TfrmPreferences
         end
         object cbCHCPchar: TCheckBox
           Left = 4
-          Height = 19
+          Height = 21
           Top = 95
           Width = 332
           Align = alTop
@@ -535,39 +536,39 @@ object frmPreferences: TfrmPreferences
     end
     object tabLinux: TTabSheet
       Caption = 'Linux'
-      ClientHeight = 219
-      ClientWidth = 348
+      ClientHeight = 223
+      ClientWidth = 344
       object sbLinux: TScrollBox
         Left = 0
-        Height = 219
+        Height = 223
         Top = 0
-        Width = 348
-        HorzScrollBar.Page = 344
-        VertScrollBar.Page = 215
+        Width = 344
+        HorzScrollBar.Page = 224
+        VertScrollBar.Page = 177
         Align = alClient
-        ClientHeight = 215
-        ClientWidth = 344
+        ClientHeight = 219
+        ClientWidth = 340
         TabOrder = 0
         object pnlLinFFmpegPath: TPanel
           Left = 4
-          Height = 46
+          Height = 40
           Top = 5
-          Width = 336
+          Width = 332
           Align = alTop
           AutoSize = True
           BorderSpacing.Left = 4
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 46
-          ClientWidth = 336
+          ClientHeight = 40
+          ClientWidth = 332
           TabOrder = 0
           object edtLinFFmpegPath: TEdit
             AnchorSideRight.Control = btnLinFFmpegPath
             Left = 0
-            Height = 27
-            Top = 19
-            Width = 298
+            Height = 28
+            Top = 12
+            Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
             BorderSpacing.Right = 3
@@ -578,9 +579,9 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = pnlLinFFmpegPath
             AnchorSideRight.Side = asrBottom
-            Left = 301
-            Height = 28
-            Top = 18
+            Left = 297
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -592,9 +593,9 @@ object frmPreferences: TfrmPreferences
           end
           object lblLinFFmpegPath: TLabel
             Left = 0
-            Height = 19
+            Height = 12
             Top = 0
-            Width = 336
+            Width = 332
             Align = alTop
             Caption = 'Path to FFmpeg or avconv Executable:'
             ParentColor = False
@@ -602,24 +603,24 @@ object frmPreferences: TfrmPreferences
         end
         object pnlLinFFplayPath: TPanel
           Left = 4
-          Height = 46
-          Top = 107
-          Width = 336
+          Height = 40
+          Top = 95
+          Width = 332
           Align = alTop
           AutoSize = True
           BorderSpacing.Left = 4
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 46
-          ClientWidth = 336
+          ClientHeight = 40
+          ClientWidth = 332
           TabOrder = 1
           object edtLinFFplayPath: TEdit
             AnchorSideRight.Control = btnLinFFplayPath
             Left = 0
-            Height = 27
-            Top = 19
-            Width = 298
+            Height = 28
+            Top = 12
+            Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
             BorderSpacing.Right = 3
@@ -630,9 +631,9 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = pnlLinFFplayPath
             AnchorSideRight.Side = asrBottom
-            Left = 301
-            Height = 28
-            Top = 18
+            Left = 297
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -644,9 +645,9 @@ object frmPreferences: TfrmPreferences
           end
           object lblLinFFplayPath: TLabel
             Left = 0
-            Height = 19
+            Height = 12
             Top = 0
-            Width = 336
+            Width = 332
             Align = alTop
             Caption = 'Path to FFplay or avplay Executable:'
             ParentColor = False
@@ -654,24 +655,24 @@ object frmPreferences: TfrmPreferences
         end
         object pnlLinTerminalExe: TPanel
           Left = 4
-          Height = 46
-          Top = 56
-          Width = 336
+          Height = 40
+          Top = 50
+          Width = 332
           Align = alTop
           AutoSize = True
           BorderSpacing.Left = 4
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 46
-          ClientWidth = 336
+          ClientHeight = 40
+          ClientWidth = 332
           TabOrder = 2
           object edtLinTerminalExe: TEdit
             AnchorSideRight.Control = btnLinTerminalExe
             Left = 0
-            Height = 27
-            Top = 19
-            Width = 298
+            Height = 28
+            Top = 12
+            Width = 294
             Align = alLeft
             Anchors = [akTop, akLeft, akRight, akBottom]
             BorderSpacing.Right = 3
@@ -682,9 +683,9 @@ object frmPreferences: TfrmPreferences
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = pnlLinTerminalExe
             AnchorSideRight.Side = asrBottom
-            Left = 301
-            Height = 28
-            Top = 18
+            Left = 297
+            Height = 27
+            Top = 13
             Width = 35
             Anchors = [akTop, akRight]
             AutoSize = True
@@ -696,9 +697,9 @@ object frmPreferences: TfrmPreferences
           end
           object lblLinTerminalExe: TLabel
             Left = 0
-            Height = 19
+            Height = 12
             Top = 0
-            Width = 336
+            Width = 332
             Align = alTop
             Caption = 'Terminal to run FFmpeg in:'
             ParentColor = False
@@ -706,24 +707,24 @@ object frmPreferences: TfrmPreferences
         end
         object pnlLinTerminalOptions: TPanel
           Left = 4
-          Height = 45
-          Top = 158
-          Width = 336
+          Height = 37
+          Top = 140
+          Width = 332
           Align = alTop
           AutoSize = True
           BorderSpacing.Left = 4
           BorderSpacing.Top = 5
           BorderSpacing.Right = 4
           BevelOuter = bvNone
-          ClientHeight = 45
-          ClientWidth = 336
+          ClientHeight = 37
+          ClientWidth = 332
           TabOrder = 3
           object edtLinTerminalOptions: TEdit
             Left = 0
-            Height = 26
+            Height = 25
             Hint = '''-e'' for xterm, ''-x'' for gnome-terminal'
-            Top = 19
-            Width = 336
+            Top = 12
+            Width = 332
             Align = alTop
             ParentShowHint = False
             ShowHint = True
@@ -731,9 +732,9 @@ object frmPreferences: TfrmPreferences
           end
           object lblLinTerminalOptions: TLabel
             Left = 0
-            Height = 19
+            Height = 12
             Top = 0
-            Width = 336
+            Width = 332
             Align = alTop
             Caption = 'Terminal Options:'
             ParentColor = False
